@@ -1,0 +1,21 @@
+eth_analyzer/
+├── __init__.py
+├── main.py                  # Entry point CLI script
+├── core/
+│   ├── __init__.py
+│   ├── block.py             # Block analysis logic
+│   ├── transaction.py       # Transaction type handling & logging
+│   ├── logs.py              # Log decoding logic
+│   └── reward.py            # Block reward calculation
+├── utils/
+│   ├── __init__.py
+│   ├── formatter.py         # Hex, time, and signature formatters
+│   ├── signatures.py        # Load and decode function/event signatures
+│   └── web3provider.py      # Web3 connection
+├── data/
+│   ├── functions.txt        # Function signature mappings
+│   └── events.txt           # Event signature mappings
+├── .env                     # For storing web3 endpoint URL
+├── requirements.txt         # All dependencies
+└── README.md                # Project overview and usage
+

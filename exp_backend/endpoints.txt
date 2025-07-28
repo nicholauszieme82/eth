@@ -1,0 +1,25 @@
+GET /                           → Welcome / health check
+GET /blocks/<number>           → Block details (with transactions)
+GET /blocks/latest             → Latest 10 blocks
+GET /txs/<tx_hash>             → Transaction details
+GET /txs/by-address?address=... → All txs involving an address (from/to)
+GET /logs/by-contract?address=... → Logs emitted by a contract
+
+
+GET /blocks/hash/<block_hash>           → Block by hash
+GET /txs/in-block/<block_number>        → Transactions in a block
+GET /blocks/range?from=100&to=110       → Get a range of blocks
+
+
+GET /address/<address>/txs              → All transactions involving address
+GET /address/<address>/logs             → All logs related to address
+GET /address/<address>/summary          → TX count, balance, first/last tx
+
+
+GET /logs/by-topic?topic0=...           → Filter logs by topic0 (event signature)
+GET /logs?contract=...&topic0=...       → Logs for a contract with specific topic
+
+
+GET /blocks?page=1&limit=10             → Paginated blocks
+GET /txs?page=1&limit=10                → Paginated transactions
+GET /stats                              → Explorer-wide stats (tx count, avg gas, etc.)
